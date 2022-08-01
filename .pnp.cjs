@@ -76,7 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@kroger/kap-federation-latest-cache", ["workspace:cache/tags/latest"]],\
       ["@kroger/kap-federation-stable-cache", ["workspace:cache/tags/stable"]],\
       ["@kroger/kap-test-app-server", ["workspace:applications/app"]],\
-      ["@kroger/kap-test-module-a", ["virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a", "workspace:modules/module-a"]],\
+      ["@kroger/kap-test-module-a", ["virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a", "workspace:modules/module-a"]],\
       ["@kroger/kap-test-module-b", ["virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b", "workspace:modules/module-b"]],\
       ["@kroger/kap-test-module-server", ["workspace:applications/module-server"]],\
       ["federation-poc", ["workspace:."]]\
@@ -451,6 +451,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.0"\
       ],\
       [\
+        "data-uri-to-buffer",\
+        "npm:4.0.0"\
+      ],\
+      [\
         "debug",\
         "virtual:c8a47bd44e78262f6ba81f94852e5b6ec2a824806d82727a6ba6fdf6dc4be2b7d8b5dea8ceb347fa00fa505716d763276ebc48239b4faa6fbc5f8f9d2aa668e2#npm:4.3.4"\
       ],\
@@ -527,12 +531,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.3.0"\
       ],\
       [\
+        "fetch-blob",\
+        "npm:3.2.0"\
+      ],\
+      [\
         "find-up",\
         "npm:5.0.0"\
       ],\
       [\
         "follow-redirects",\
         "npm:1.5.10"\
+      ],\
+      [\
+        "formdata-polyfill",\
+        "npm:4.0.10"\
       ],\
       [\
         "fresh",\
@@ -867,8 +879,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.1.0"\
       ],\
       [\
+        "node-domexception",\
+        "npm:1.0.0"\
+      ],\
+      [\
         "node-fetch",\
-        "virtual:1412a43f1ddbed33a2c596fddb9c673807783ed640a1a55f2f4a67f3d44bc3a60c07cb9a130ed1f88ad8641d2301f87774154f66287ab7780be1cc16574bae49#npm:2.6.7"\
+        "npm:3.2.10"\
       ],\
       [\
         "node-gyp",\
@@ -1155,6 +1171,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.1.2"\
       ],\
       [\
+        "web-streams-polyfill",\
+        "npm:3.2.1"\
+      ],\
+      [\
         "webidl-conversions",\
         "npm:3.0.1"\
       ],\
@@ -1302,7 +1322,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./cache/tags/alpha/",\
           "packageDependencies": [\
             ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"]\
           ],\
           "linkType": "SOFT"\
@@ -1313,7 +1334,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./cache/tags/beta/",\
           "packageDependencies": [\
             ["@kroger/kap-federation-beta-cache", "workspace:cache/tags/beta"],\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"]\
           ],\
           "linkType": "SOFT"\
@@ -1324,7 +1346,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./cache/tags/canary/",\
           "packageDependencies": [\
             ["@kroger/kap-federation-canary-cache", "workspace:cache/tags/canary"],\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"]\
           ],\
           "linkType": "SOFT"\
@@ -1346,7 +1369,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./cache/tags/latest/",\
           "packageDependencies": [\
             ["@kroger/kap-federation-latest-cache", "workspace:cache/tags/latest"],\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"]\
           ],\
           "linkType": "SOFT"\
@@ -1357,7 +1381,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./cache/tags/stable/",\
           "packageDependencies": [\
             ["@kroger/kap-federation-stable-cache", "workspace:cache/tags/stable"],\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"]\
           ],\
           "linkType": "SOFT"\
@@ -1381,7 +1406,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
             ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
-            ["fs-extra", "npm:10.1.0"]\
+            ["chalk", "npm:4.1.2"],\
+            ["fs-extra", "npm:10.1.0"],\
+            ["node-fetch", "npm:3.2.10"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1392,23 +1419,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
-            ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
-            ["@types/kroger__kap-federation-controller", null],\
-            ["rollup", "npm:2.77.2"]\
-          ],\
-          "packagePeers": [\
-            "@kroger/kap-federation-controller",\
-            "@types/kroger__kap-federation-controller"\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a", {\
-          "packageLocation": "./.yarn/__virtual__/@kroger-kap-test-module-a-virtual-8df32ebfc8/1/modules/module-a/",\
-          "packageDependencies": [\
-            ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
-            ["@kroger/kap-federation-controller", null],\
             ["@radpack/core", "npm:1.0.4"],\
             ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
             ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
@@ -1438,7 +1448,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@kroger-kap-test-module-b-virtual-f26f16caf9/1/modules/module-b/",\
           "packageDependencies": [\
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"],\
-            ["@kroger/kap-federation-controller", null],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
             ["@radpack/core", "npm:1.0.4"],\
             ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
             ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
@@ -2405,6 +2415,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["data-uri-to-buffer", [\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/data-uri-to-buffer-npm-4.0.0-e7a49f58f7-a010653869.zip/node_modules/data-uri-to-buffer/",\
+          "packageDependencies": [\
+            ["data-uri-to-buffer", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["debug", [\
         ["npm:2.6.9", {\
           "packageLocation": "./.yarn/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",\
@@ -2673,6 +2692,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["fetch-blob", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/fetch-blob-npm-3.2.0-28e01becfc-f19bc28a2a.zip/node_modules/fetch-blob/",\
+          "packageDependencies": [\
+            ["fetch-blob", "npm:3.2.0"],\
+            ["node-domexception", "npm:1.0.0"],\
+            ["web-streams-polyfill", "npm:3.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["find-up", [\
         ["npm:5.0.0", {\
           "packageLocation": "./.yarn/cache/find-up-npm-5.0.0-e03e9b796d-07955e3573.zip/node_modules/find-up/",\
@@ -2690,6 +2720,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["follow-redirects", "npm:1.5.10"],\
             ["debug", "virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["formdata-polyfill", [\
+        ["npm:4.0.10", {\
+          "packageLocation": "./.yarn/cache/formdata-polyfill-npm-4.0.10-e03013c013-82a34df292.zip/node_modules/formdata-polyfill/",\
+          "packageDependencies": [\
+            ["formdata-polyfill", "npm:4.0.10"],\
+            ["fetch-blob", "npm:3.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3686,6 +3726,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["node-domexception", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/node-domexception-npm-1.0.0-e1e813b76f-ee1d37dd2a.zip/node_modules/node-domexception/",\
+          "packageDependencies": [\
+            ["node-domexception", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["node-fetch", [\
         ["npm:2.6.7", {\
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
@@ -3693,6 +3742,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-fetch", "npm:2.6.7"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["npm:3.2.10", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-3.2.10-b87c28708a-e65322431f.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "npm:3.2.10"],\
+            ["data-uri-to-buffer", "npm:4.0.0"],\
+            ["encoding", "npm:0.1.13"],\
+            ["fetch-blob", "npm:3.2.0"],\
+            ["formdata-polyfill", "npm:4.0.10"]\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:1412a43f1ddbed33a2c596fddb9c673807783ed640a1a55f2f4a67f3d44bc3a60c07cb9a130ed1f88ad8641d2301f87774154f66287ab7780be1cc16574bae49#npm:2.6.7", {\
           "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-5e7e36aeee/0/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
@@ -4503,6 +4563,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/vary-npm-1.1.2-b49f70ae63-ae0123222c.zip/node_modules/vary/",\
           "packageDependencies": [\
             ["vary", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["web-streams-polyfill", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/web-streams-polyfill-npm-3.2.1-835bd3857e-b119c78574.zip/node_modules/web-streams-polyfill/",\
+          "packageDependencies": [\
+            ["web-streams-polyfill", "npm:3.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\

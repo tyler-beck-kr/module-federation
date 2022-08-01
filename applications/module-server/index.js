@@ -5,7 +5,7 @@ import { start, scenarios, features, logging, ConfigurationLoader,
  } from '@kroger/cx-core-web-server'
 import { CHUNK_PATH, MANIFEST_PATH } from '@kroger/kap-federation-controller'
 import chunkMiddleware from './routes/chunk.mjs'
-import manifestMiddleware from './routes/manifest.mjs'
+import { getManifest, postManifest } from './routes/manifest.mjs'
 import moduleUpdater from './scenarios/update-federation.mjs'
 
 const { composeBindings, map } = logging
@@ -30,23 +30,6 @@ const federatedModules = {
 }
 
 // ----------------------------------------------------------------------------
-// radpack file helpers - need to update paths in manifests and in chunks in 
-// order to prevent errors. We should do a PR to add a file validation helperfn.
-// ----------------------------------------------------------------------------
-const remapManifestFilePaths = (manifest) => {
-  Object.keys(manifest.exports).forEach((name) => {
-    manifest.exports[name].d.forEach((entry) => {
-      entry[1].forEach((asset) => {
-        asset.f = `${name}/${asset.f}`
-      })
-    })
-  })
-
-  return manifest
-}
-
-
-// ----------------------------------------------------------------------------
 // dynamic configuration loader
 // ----------------------------------------------------------------------------
 const configLoader = new ConfigurationLoader({
@@ -64,18 +47,6 @@ const configLoader = new ConfigurationLoader({
     ttl: 10000,
   }),
 
-
-  // this is going to go away.
-  // ...(Object.entries(federatedModules).reduce((acc, [key, path]) => {
-  //   acc[`radpack_${key}`] = new FileConfigurationSource({
-  //     id: `radpack/${key}`,
-  //     path: `${path}/radpack.json`,
-  //     parse: (str) => remapManifestFilePaths(JSON.parse(str)),
-  //     ttl: 10000
-  //   })
-
-  //   return acc
-  // }, {}))
 })
 
 // ----------------------------------------------------------------------------
@@ -114,17 +85,20 @@ start({
     ({ server, logger, router, federation, ...config }) => {
       //should probably move this to a composed /radpack route group 
       server.use(bodyparser())
+      
+      //TODO: move the router.s into routes, pass in router
       router.get(
-        `${CHUNK_PATH}/*chunk`,
+        `${CHUNK_PATH}/:tag/*chunk`,
         composeBindings(
           {
             category: 'radpack',
             subcategory: 'chunk',
           },
-          chunkMiddleware({ federatedModules: federation })
+          chunkMiddleware({ federatedModules: federation, config })
         )
       )
 
+      //TODO: move the router.s into routes, pass in router
       router.get(
         `${MANIFEST_PATH}/:tag/*module`,
         composeBindings(
@@ -132,7 +106,19 @@ start({
             category: 'radpack',
             subcategory: 'manifest',
           },
-          manifestMiddleware({ federatedModules: federation, config })
+          getManifest({ federatedModules: federation, config })
+        )
+      ) 
+
+      //TODO: move the router.s into routes, pass in router
+      router.post(
+        `${MANIFEST_PATH}`,
+        composeBindings(
+          {
+            category: 'radpack',
+            subcategory: 'custom-manifest',
+          },
+          postManifest({ federatedModules: federation, config })
         )
       ) 
     }

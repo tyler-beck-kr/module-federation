@@ -49,21 +49,17 @@ let controllerInitialization
   * @param {boolean} [reload=false] override existing registration and reload. needs to be tested
   * @return {*} 
   */
-export async function initialize(url, reload = false) {
+export async function initialize({ manifest, moduleRegistry, reload = false}) {
     
       // only initiate registration if it hasn't been called yet or if we are forcing a reload
       if (reload || !controllerInitialization) {
-  
         // structure registration
-        controllerInitialization = radpack.register(
-          { 
-            url: `${url}${MANIFEST_PATH}/*`,
-            vars: {
-              baseUrl:  `${url}${CHUNK_PATH}`
-            }
-          },
-        )
-  
+        controllerInitialization = radpack.register({ 
+          url: `${manifest}`,
+          vars: {
+            baseUrl:  `${moduleRegistry}${CHUNK_PATH}`
+          }
+        })
       }
       // Always return the global promise for radpack initialization.  
       // This allows us to execute the same call across multiple locations
@@ -136,13 +132,11 @@ export class HybridFederatedModule {
         // function definition
         def[prop] = {
           configurable: true,
-          enumerable: true,
           value: unloadedErrorFn(prop)
         }
-      } else {
+      } else if ( get || set ) {
         def[prop] = {
           configurable: true,
-          enumerable: true,
           get: get ? unloadedErrorFn(`get ${prop}`) : undefined,
           set: set ? unloadedErrorFn(`set ${prop}`) : undefined
         }

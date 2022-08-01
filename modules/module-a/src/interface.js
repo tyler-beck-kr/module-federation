@@ -9,8 +9,14 @@ class ModuleA extends HybridFederatedModule {
         getMessage: { fn: true },
         getNumbers: { fn: true },
         message: { set: true },
-      }
-    })
+        status: {} // doesn't create shell method but allows for overriding implementation
+      },
+      createShell: true
+    }) 
+  }
+
+  status() {
+   return 'implementation unloaded'
   }
 
 }

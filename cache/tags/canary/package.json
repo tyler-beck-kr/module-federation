@@ -9,6 +9,7 @@
   "author": "Tyler Beck",
   "license": "UNLICENSED",
   "dependencies": {
+    "@kroger/kap-federation-controller": "*",
     "@kroger/kap-test-module-a": "workspace:^",
     "@kroger/kap-test-module-b": "workspace:^"
   }

@@ -25,13 +25,9 @@ const scenario = ({ tags, transport }) =>
     })
 
     // can this be moved into scenario state?
-    let modules
+    let modules = []
     let modulesLastChanged = 0
-    let lastUpdate = 0
-
-    const handleModulesChanged = async (modules) => {
-      modulesLastChanged = Date.now()
-    }
+    let lastUpdate = 0 // set this < last change so that things update on start.
 
     // we should consider inverting this to -> loglevels.federation, I think we can still
     // watch one level deeper, but need to verify
@@ -42,8 +38,10 @@ const scenario = ({ tags, transport }) =>
 
     dynamicConfiguration.watch('federation', (list) => {
       log.debug('apply module config change')
-      modules = list
-      modulesLastChanged = Date.now()
+      if (JSON.stringify(list) !== JSON.stringify(modules)) {
+        modules = list
+        modulesLastChanged = Date.now()
+      }
     })
 
     return new Scenario({
@@ -66,7 +64,7 @@ const scenario = ({ tags, transport }) =>
               // or do we use latest, or do we allow authors to specify default behavior?
               d[id] = mtags[tag]
               return d
-            }, {})
+            }, {"@kroger/kap-federation-controller":"*"})
     
             await writeJSON(pkgPath, pkg, { spaces: "  "})
           }
@@ -113,7 +111,7 @@ export default ({
     scenario({ tags, transport }),
     {
       playInterval: interval,
-      playOnStart: true,
+      playOnStart: false,
     },
   ]
 }
