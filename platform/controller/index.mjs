@@ -9,8 +9,8 @@ const radpack = require('@radpack/server')
 const ERROR_UNLOADED = 'HybridFederatedModule async implementation must be loaded before accessing property'
 const ERROR_IMPLEMENTATION_MISMATCH= 'HybridFederatedModule implementation mismatch.'
 
-export const MANIFEST_PATH = '/federated/manifest'
-export const CHUNK_PATH = '/federated/chunk'
+export const MANIFEST_PATH = '/federation/manifest'
+export const CHUNK_PATH = '/federation/chunk'
 
 /**
  * unloadedErrorFn - placeholder for interface methods prior to implementation load

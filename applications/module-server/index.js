@@ -53,14 +53,14 @@ const configLoader = new ConfigurationLoader({
   // any config that starts with "__" gets spread onto the root configuration
   __root: new FileConfigurationSource({
     id: 'default',
-    path: './data/config/default.json',
+    path: './config/default.json',
     ttl: 0,
   }),
 
   // list of modules for which system should enable federation
   federation: new FileConfigurationSource({
     id: 'federatedModules',
-    path: './data/config/federated-modules.json',
+    path: './config/federated-modules.json',
     ttl: 10000,
   }),
 
@@ -79,7 +79,7 @@ const configLoader = new ConfigurationLoader({
 })
 
 // ----------------------------------------------------------------------------
-// tags
+// tags - these are the variants that the modules server will support
 // ----------------------------------------------------------------------------
 const tags = [
   "alpha",
@@ -111,7 +111,7 @@ start({
     })
   ],
   features: [
-    ({ server, logger, router, federatedModules, radpack, ...config }) => {
+    ({ server, logger, router, federation, ...config }) => {
       //should probably move this to a composed /radpack route group 
       server.use(bodyparser())
       router.get(
@@ -121,22 +121,21 @@ start({
             category: 'radpack',
             subcategory: 'chunk',
           },
-          chunkMiddleware({ federatedModules, })
+          chunkMiddleware({ federatedModules: federation })
         )
       )
-    
+
       router.get(
-        `${MANIFEST_PATH}/*module`,
+        `${MANIFEST_PATH}/:tag/*module`,
         composeBindings(
           {
             category: 'radpack',
             subcategory: 'manifest',
           },
-          manifestMiddleware({ federatedModules, config })
+          manifestMiddleware({ federatedModules: federation, config })
         )
       ) 
-    
     }
-      ],
+  ],
   
 })

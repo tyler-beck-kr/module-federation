@@ -275,6 +275,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.13.10"\
       ],\
       [\
+        "@yarnpkg/parsers",\
+        "npm:2.5.1"\
+      ],\
+      [\
         "abbrev",\
         "npm:1.1.1"\
       ],\
@@ -313,6 +317,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "are-we-there-yet",\
         "npm:3.0.1"\
+      ],\
+      [\
+        "argparse",\
+        "npm:1.0.10"\
       ],\
       [\
         "axios",\
@@ -501,6 +509,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "escape-html",\
         "npm:1.0.3"\
+      ],\
+      [\
+        "esprima",\
+        "npm:4.0.1"\
       ],\
       [\
         "estree-walker",\
@@ -709,6 +721,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "isexe",\
         "npm:2.0.0"\
+      ],\
+      [\
+        "js-yaml",\
+        "npm:3.14.1"\
       ],\
       [\
         "json5",\
@@ -1039,6 +1055,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.4.8"\
       ],\
       [\
+        "sprintf-js",\
+        "npm:1.0.3"\
+      ],\
+      [\
         "ssri",\
         "npm:9.0.1"\
       ],\
@@ -1089,6 +1109,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "tr46",\
         "npm:0.0.3"\
+      ],\
+      [\
+        "tslib",\
+        "npm:1.14.1"\
       ],\
       [\
         "tsscmp",\
@@ -1453,6 +1477,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
             ["@kroger/kap-federation-latest-cache", "workspace:cache/tags/latest"],\
             ["@kroger/kap-federation-stable-cache", "workspace:cache/tags/stable"],\
+            ["@yarnpkg/parsers", "npm:2.5.1"],\
             ["chalk", "npm:4.1.2"],\
             ["fs-extra", "npm:10.1.0"],\
             ["koa-bodyparser", "npm:4.3.0"]\
@@ -1923,6 +1948,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@yarnpkg/parsers", [\
+        ["npm:2.5.1", {\
+          "packageLocation": "./.yarn/cache/@yarnpkg-parsers-npm-2.5.1-41422fa753-42f98b8bd6.zip/node_modules/@yarnpkg/parsers/",\
+          "packageDependencies": [\
+            ["@yarnpkg/parsers", "npm:2.5.1"],\
+            ["js-yaml", "npm:3.14.1"],\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["abbrev", [\
         ["npm:1.1.1", {\
           "packageLocation": "./.yarn/cache/abbrev-npm-1.1.1-3659247eab-a4a97ec07d.zip/node_modules/abbrev/",\
@@ -2020,6 +2056,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["are-we-there-yet", "npm:3.0.1"],\
             ["delegates", "npm:1.0.0"],\
             ["readable-stream", "npm:3.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["argparse", [\
+        ["npm:1.0.10", {\
+          "packageLocation": "./.yarn/cache/argparse-npm-1.0.10-528934e59d-7ca6e45583.zip/node_modules/argparse/",\
+          "packageDependencies": [\
+            ["argparse", "npm:1.0.10"],\
+            ["sprintf-js", "npm:1.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2571,6 +2617,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/escape-html-npm-1.0.3-376c22ee74-6213ca9ae0.zip/node_modules/escape-html/",\
           "packageDependencies": [\
             ["escape-html", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["esprima", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/esprima-npm-4.0.1-1084e98778-b45bc805a6.zip/node_modules/esprima/",\
+          "packageDependencies": [\
+            ["esprima", "npm:4.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3181,6 +3236,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/isexe-npm-2.0.0-b58870bd2e-26bf6c5480.zip/node_modules/isexe/",\
           "packageDependencies": [\
             ["isexe", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["js-yaml", [\
+        ["npm:3.14.1", {\
+          "packageLocation": "./.yarn/cache/js-yaml-npm-3.14.1-b968c6095e-bef146085f.zip/node_modules/js-yaml/",\
+          "packageDependencies": [\
+            ["js-yaml", "npm:3.14.1"],\
+            ["argparse", "npm:1.0.10"],\
+            ["esprima", "npm:4.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4169,6 +4235,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["sprintf-js", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/sprintf-js-npm-1.0.3-73f0a322fa-19d79aec21.zip/node_modules/sprintf-js/",\
+          "packageDependencies": [\
+            ["sprintf-js", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ssri", [\
         ["npm:9.0.1", {\
           "packageLocation": "./.yarn/cache/ssri-npm-9.0.1-33ce27f4f8-fb58f5e46b.zip/node_modules/ssri/",\
@@ -4318,6 +4393,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tr46-npm-0.0.3-de53018915-726321c5ea.zip/node_modules/tr46/",\
           "packageDependencies": [\
             ["tr46", "npm:0.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tslib", [\
+        ["npm:1.14.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:1.14.1"]\
           ],\
           "linkType": "HARD"\
         }]\

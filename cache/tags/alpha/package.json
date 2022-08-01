@@ -9,7 +9,7 @@
   "author": "Tyler Beck",
   "license": "UNLICENSED",
   "dependencies": {
-    "@kroger/kap-test-module-a": "alpha",
+    "@kroger/kap-test-module-a": "workspace:^",
     "@kroger/kap-test-module-b": "workspace:^"
   }
 }

@@ -29,6 +29,7 @@
     "@kroger/kap-federation-controller": "workspace:^",
     "@kroger/kap-federation-latest-cache": "workspace:^",
     "@kroger/kap-federation-stable-cache": "workspace:^",
+    "@yarnpkg/parsers": "^2.5.0",
     "chalk": "^4.1.2",
     "fs-extra": "^10.1.0",
     "koa-bodyparser": "^4.3.0"

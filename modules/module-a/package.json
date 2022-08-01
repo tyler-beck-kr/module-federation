@@ -7,7 +7,8 @@
   "main": "./src/interface.js",
   "type": "module",
   "exports": {
-    ".": "./src/interface.js"
+    ".": "./src/interface.js",
+    "./manifest": "./dist/radpack/radpack.json"
   },
   "scripts": {
     "build": "rollup -c ./rollup.config.js"
