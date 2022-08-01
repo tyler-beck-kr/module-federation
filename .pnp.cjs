@@ -59,16 +59,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@kroger/kap-federation-controller",\
         "reference": "workspace:platform/controller"\
-      },\
-      {\
-        "name": "@kroger/kap-federated-module-feature",\
-        "reference": "workspace:platform/module-server-feature"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["@kroger/kap-federated-module-feature", ["workspace:platform/module-server-feature"]],\
       ["@kroger/kap-federation-alpha-cache", ["workspace:cache/tags/alpha"]],\
       ["@kroger/kap-federation-beta-cache", ["workspace:cache/tags/beta"]],\
       ["@kroger/kap-federation-canary-cache", ["workspace:cache/tags/canary"]],\
@@ -105,10 +100,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "@kroger/kap-constants",\
         "npm:0.6.0::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-constants%2F-%2F%40kroger%2Fkap-constants-0.6.0.tgz"\
-      ],\
-      [\
-        "@kroger/kap-federated-module-feature",\
-        "workspace:platform/module-server-feature"\
       ],\
       [\
         "@kroger/kap-federation-alpha-cache",\
@@ -1302,21 +1293,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@kroger/kap-federated-module-feature", [\
-        ["workspace:platform/module-server-feature", {\
-          "packageLocation": "./platform/module-server-feature/",\
-          "packageDependencies": [\
-            ["@kroger/kap-federated-module-feature", "workspace:platform/module-server-feature"],\
-            ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
-            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
-            ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/server", "virtual:4607c0b876e40f3941bf2edd109854509b778272a6152966864451a34b237902fbbffd75a6cb113e4474b9d8467c1e291d0b140a8260bbe045eca11e18919add#npm:1.1.2"],\
-            ["fs-extra", "npm:10.1.0"],\
-            ["koa-bodyparser", "npm:4.3.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["@kroger/kap-federation-alpha-cache", [\
         ["workspace:cache/tags/alpha", {\
           "packageLocation": "./cache/tags/alpha/",\
@@ -1480,7 +1456,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/kap-test-module-server", "workspace:applications/module-server"],\
             ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
             ["@kroger/kap-configuration-loaders", "npm:0.1.2::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-configuration-loaders%2F-%2F%40kroger%2Fkap-configuration-loaders-0.1.2.tgz"],\
-            ["@kroger/kap-federated-module-feature", "workspace:platform/module-server-feature"],\
             ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
             ["@kroger/kap-federation-beta-cache", "workspace:cache/tags/beta"],\
             ["@kroger/kap-federation-canary-cache", "workspace:cache/tags/canary"],\

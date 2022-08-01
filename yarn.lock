@@ -78,19 +78,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kroger/kap-federated-module-feature@*, @kroger/kap-federated-module-feature@workspace:platform/module-server-feature":
-  version: 0.0.0-use.local
-  resolution: "@kroger/kap-federated-module-feature@workspace:platform/module-server-feature"
-  dependencies:
-    "@kroger/cx-core-web-server": 2.3.6
-    "@kroger/kap-federation-controller": "*"
-    "@radpack/core": ^1.0.4
-    "@radpack/server": ^1.0.4
-    fs-extra: ^10.1.0
-    koa-bodyparser: ^4.3.0
-  languageName: unknown
-  linkType: soft
-
 "@kroger/kap-federation-alpha-cache@workspace:^, @kroger/kap-federation-alpha-cache@workspace:cache/tags/alpha":
   version: 0.0.0-use.local
   resolution: "@kroger/kap-federation-alpha-cache@workspace:cache/tags/alpha"
@@ -204,7 +191,6 @@ __metadata:
   dependencies:
     "@kroger/cx-core-web-server": 2.3.6
     "@kroger/kap-configuration-loaders": "^0.1.1 "
-    "@kroger/kap-federated-module-feature": "*"
     "@kroger/kap-federation-alpha-cache": "workspace:^"
     "@kroger/kap-federation-beta-cache": "workspace:^"
     "@kroger/kap-federation-canary-cache": "workspace:^"

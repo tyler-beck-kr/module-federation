@@ -22,7 +22,6 @@
   "dependencies": {
     "@kroger/cx-core-web-server": "2.3.6",
     "@kroger/kap-configuration-loaders": "^0.1.1 ",
-    "@kroger/kap-federated-module-feature": "*",
     "@kroger/kap-federation-alpha-cache": "workspace:^",
     "@kroger/kap-federation-beta-cache": "workspace:^",
     "@kroger/kap-federation-canary-cache": "workspace:^",

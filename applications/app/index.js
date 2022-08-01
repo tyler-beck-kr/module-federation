@@ -15,7 +15,6 @@ const keypress = async () => {
   }))
 }
 
-
 const bootstrap = async () => {
   // initialization -----------------------------------------------------------
   // load customized manifest from module server
@@ -38,9 +37,6 @@ const bootstrap = async () => {
     manifest: './radpack.json',
     moduleRegistry: 'http://localhost:3000'
   })
-
-
-  console.log(a.status())
 
   const demoSteps = [
     {
@@ -90,10 +86,10 @@ const bootstrap = async () => {
       console.log("We caught an error:", e)
     }
     await keypress()
-    console.log("\n\n")
+    console.log("")
   }
 
-  
+
   process.exit(0) 
  }
 
