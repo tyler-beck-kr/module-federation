@@ -164,7 +164,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "@radpack/build",\
-        "virtual:bf00821805467ca5e750aa27b4a6999c8ca7ab3499e8f49050cf94930f6e9fc68733b44adff281fb8172ccb4ffe88dfd972206c39e52e578b60b55c6486e38b9#npm:1.0.4"\
+        "virtual:556081b014d6f2093e346424cdf78c0b7f77593430eaa288a12c101c485368aaf546b3acc8cf2dc0f705b80b441db0184f285dac0e509956368e94268d5e4d1c#npm:1.0.4"\
       ],\
       [\
         "@radpack/core",\
@@ -172,7 +172,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "@radpack/rollup-plugin",\
-        "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"\
+        "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"\
       ],\
       [\
         "@radpack/server",\
@@ -184,7 +184,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "@rollup/plugin-node-resolve",\
-        "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"\
+        "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"\
       ],\
       [\
         "@rollup/plugin-typescript",\
@@ -192,7 +192,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "@rollup/pluginutils",\
-        "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"\
+        "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"\
       ],\
       [\
         "@tootallnate/once",\
@@ -1355,12 +1355,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@kroger/kap-test-app-server", "workspace:applications/app"],\
             ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
-            ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
-            ["@kroger/kap-federation-beta-cache", "workspace:cache/tags/beta"],\
-            ["@kroger/kap-federation-canary-cache", "workspace:cache/tags/canary"],\
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
-            ["@kroger/kap-federation-latest-cache", "workspace:cache/tags/latest"],\
-            ["@kroger/kap-federation-stable-cache", "workspace:cache/tags/stable"],\
             ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["fs-extra", "npm:10.1.0"]\
           ],\
@@ -1374,8 +1369,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/kap-test-module-a", "virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a"],\
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
             ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
             ["@types/kroger__kap-federation-controller", null],\
             ["rollup", "npm:2.77.2"]\
           ],\
@@ -1391,8 +1386,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/kap-test-module-a", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-a"],\
             ["@kroger/kap-federation-controller", null],\
             ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
             ["@types/kroger__kap-federation-controller", null],\
             ["rollup", "npm:2.77.2"]\
           ],\
@@ -1407,8 +1402,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@kroger/kap-test-module-a", "workspace:modules/module-a"],\
             ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
             ["rollup", "npm:2.77.2"]\
           ],\
           "linkType": "SOFT"\
@@ -1421,8 +1416,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/kap-test-module-b", "virtual:5b3b6e7d10da4db25fc80b92cb740c5055dd0bec822074e5d91fe2c9b8e35cc0980de6a03b7aef8573d5c560c91d84c29542d72ab7c60c297888ccb8aadcbd6f#workspace:modules/module-b"],\
             ["@kroger/kap-federation-controller", null],\
             ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
             ["@types/kroger__kap-federation-controller", null],\
             ["rollup", "npm:2.77.2"]\
           ],\
@@ -1437,8 +1432,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@kroger/kap-test-module-b", "workspace:modules/module-b"],\
             ["@radpack/core", "npm:1.0.4"],\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
             ["rollup", "npm:2.77.2"]\
           ],\
           "linkType": "SOFT"\
@@ -1452,7 +1447,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
             ["@kroger/kap-configuration-loaders", "npm:0.1.2::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-configuration-loaders%2F-%2F%40kroger%2Fkap-configuration-loaders-0.1.2.tgz"],\
             ["@kroger/kap-federated-module-feature", "workspace:platform/module-server-feature"],\
+            ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
+            ["@kroger/kap-federation-beta-cache", "workspace:cache/tags/beta"],\
+            ["@kroger/kap-federation-canary-cache", "workspace:cache/tags/canary"],\
             ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-federation-latest-cache", "workspace:cache/tags/latest"],\
+            ["@kroger/kap-federation-stable-cache", "workspace:cache/tags/stable"],\
             ["chalk", "npm:4.1.2"],\
             ["fs-extra", "npm:10.1.0"],\
             ["koa-bodyparser", "npm:4.3.0"]\
@@ -1490,10 +1490,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:bf00821805467ca5e750aa27b4a6999c8ca7ab3499e8f49050cf94930f6e9fc68733b44adff281fb8172ccb4ffe88dfd972206c39e52e578b60b55c6486e38b9#npm:1.0.4", {\
-          "packageLocation": "./.yarn/__virtual__/@radpack-build-virtual-ce53ee0ad5/0/cache/@radpack-build-npm-1.0.4-69756ff798-092c47eb30.zip/node_modules/@radpack/build/",\
+        ["virtual:556081b014d6f2093e346424cdf78c0b7f77593430eaa288a12c101c485368aaf546b3acc8cf2dc0f705b80b441db0184f285dac0e509956368e94268d5e4d1c#npm:1.0.4", {\
+          "packageLocation": "./.yarn/__virtual__/@radpack-build-virtual-7de9119567/0/cache/@radpack-build-npm-1.0.4-69756ff798-092c47eb30.zip/node_modules/@radpack/build/",\
           "packageDependencies": [\
-            ["@radpack/build", "virtual:bf00821805467ca5e750aa27b4a6999c8ca7ab3499e8f49050cf94930f6e9fc68733b44adff281fb8172ccb4ffe88dfd972206c39e52e578b60b55c6486e38b9#npm:1.0.4"],\
+            ["@radpack/build", "virtual:556081b014d6f2093e346424cdf78c0b7f77593430eaa288a12c101c485368aaf546b3acc8cf2dc0f705b80b441db0184f285dac0e509956368e94268d5e4d1c#npm:1.0.4"],\
             ["@radpack/core", "npm:1.0.4"],\
             ["@types/radpack__core", null],\
             ["find-up", "npm:5.0.0"],\
@@ -1524,11 +1524,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4", {\
-          "packageLocation": "./.yarn/__virtual__/@radpack-rollup-plugin-virtual-bf00821805/0/cache/@radpack-rollup-plugin-npm-1.0.4-610abf2d9a-98a1a011a9.zip/node_modules/@radpack/rollup-plugin/",\
+        ["virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4", {\
+          "packageLocation": "./.yarn/__virtual__/@radpack-rollup-plugin-virtual-556081b014/0/cache/@radpack-rollup-plugin-npm-1.0.4-610abf2d9a-98a1a011a9.zip/node_modules/@radpack/rollup-plugin/",\
           "packageDependencies": [\
-            ["@radpack/rollup-plugin", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:1.0.4"],\
-            ["@radpack/build", "virtual:bf00821805467ca5e750aa27b4a6999c8ca7ab3499e8f49050cf94930f6e9fc68733b44adff281fb8172ccb4ffe88dfd972206c39e52e578b60b55c6486e38b9#npm:1.0.4"],\
+            ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
+            ["@radpack/build", "virtual:556081b014d6f2093e346424cdf78c0b7f77593430eaa288a12c101c485368aaf546b3acc8cf2dc0f705b80b441db0184f285dac0e509956368e94268d5e4d1c#npm:1.0.4"],\
             ["@radpack/core", "npm:1.0.4"],\
             ["@types/radpack__core", null],\
             ["@types/rollup", null],\
@@ -1581,7 +1581,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@rollup-plugin-commonjs-virtual-859897c431/0/cache/@rollup-plugin-commonjs-npm-21.1.0-c7401a71bc-e8280f4b61.zip/node_modules/@rollup/plugin-commonjs/",\
           "packageDependencies": [\
             ["@rollup/plugin-commonjs", "virtual:ee8774c6b28e46449d64921dbe865aff7c4967637ae1a979193c9c8307f6c06e0abfb1d64e3a9f90287549eee5e689f5653383f9cebc0d10577d6cb9e3d7ef72#npm:21.1.0"],\
-            ["@rollup/pluginutils", "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"],\
+            ["@rollup/pluginutils", "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"],\
             ["@types/rollup", null],\
             ["commondir", "npm:1.0.1"],\
             ["estree-walker", "npm:2.0.2"],\
@@ -1613,11 +1613,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-node-resolve-virtual-78c2b0d9b1/0/cache/@rollup-plugin-node-resolve-npm-11.2.1-1cea144df4-6f3b3ecf9a.zip/node_modules/@rollup/plugin-node-resolve/",\
+        ["virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-node-resolve-virtual-9a9d7b6e50/0/cache/@rollup-plugin-node-resolve-npm-11.2.1-1cea144df4-6f3b3ecf9a.zip/node_modules/@rollup/plugin-node-resolve/",\
           "packageDependencies": [\
-            ["@rollup/plugin-node-resolve", "virtual:8df32ebfc8be31d49e0bbba0a9dafcd816e3da1f21a4ea32473241f04eda8000fa8b254c3aa0e6f4cd52e66e71aac907b4f7ef6e48e2db0dfb87038d5981341a#npm:11.2.1"],\
-            ["@rollup/pluginutils", "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"],\
+            ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:11.2.1"],\
+            ["@rollup/pluginutils", "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"],\
             ["@types/resolve", "npm:1.17.1"],\
             ["@types/rollup", null],\
             ["builtin-modules", "npm:3.3.0"],\
@@ -1636,7 +1636,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@rollup-plugin-node-resolve-virtual-f0a9633546/0/cache/@rollup-plugin-node-resolve-npm-13.3.0-a93dd11647-ec5418e6b3.zip/node_modules/@rollup/plugin-node-resolve/",\
           "packageDependencies": [\
             ["@rollup/plugin-node-resolve", "virtual:ee8774c6b28e46449d64921dbe865aff7c4967637ae1a979193c9c8307f6c06e0abfb1d64e3a9f90287549eee5e689f5653383f9cebc0d10577d6cb9e3d7ef72#npm:13.3.0"],\
-            ["@rollup/pluginutils", "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"],\
+            ["@rollup/pluginutils", "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"],\
             ["@types/resolve", "npm:1.17.1"],\
             ["@types/rollup", null],\
             ["deepmerge", "npm:4.2.2"],\
@@ -1664,7 +1664,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@rollup-plugin-typescript-virtual-4baefd9687/0/cache/@rollup-plugin-typescript-npm-8.3.4-47604dbf60-3a86664a1c.zip/node_modules/@rollup/plugin-typescript/",\
           "packageDependencies": [\
             ["@rollup/plugin-typescript", "virtual:ee8774c6b28e46449d64921dbe865aff7c4967637ae1a979193c9c8307f6c06e0abfb1d64e3a9f90287549eee5e689f5653383f9cebc0d10577d6cb9e3d7ef72#npm:8.3.4"],\
-            ["@rollup/pluginutils", "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"],\
+            ["@rollup/pluginutils", "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"],\
             ["@types/rollup", null],\
             ["@types/tslib", null],\
             ["@types/typescript", null],\
@@ -1692,10 +1692,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-8f42720dc4/0/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-8be16e2786.zip/node_modules/@rollup/pluginutils/",\
+        ["virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-edb8dfa30c/0/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-8be16e2786.zip/node_modules/@rollup/pluginutils/",\
           "packageDependencies": [\
-            ["@rollup/pluginutils", "virtual:78c2b0d9b1cc3c709482a5b85a17adf987e787939ba2149adb257f9ca9bcc774e9656477686f8d1dc9dd895baeb73a8a0ff0de4bf88fd486752057ec9b374a36#npm:3.1.0"],\
+            ["@rollup/pluginutils", "virtual:9a9d7b6e50430ff78bc84264d582fe47083a9cf800a86e77690ed7ab6833ddd7de8d595eb89b36ebbd1f951f4cc3054e51f79152b717ecb608edac91563dabf6#npm:3.1.0"],\
             ["@types/estree", "npm:0.0.39"],\
             ["@types/rollup", null],\
             ["estree-walker", "npm:1.0.1"],\

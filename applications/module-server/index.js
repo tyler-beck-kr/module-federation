@@ -58,7 +58,7 @@ const configLoader = new ConfigurationLoader({
   }),
 
   // list of modules for which system should enable federation
-  federatedModules: new FileConfigurationSource({
+  federation: new FileConfigurationSource({
     id: 'federatedModules',
     path: './data/config/federated-modules.json',
     ttl: 10000,
@@ -98,13 +98,17 @@ start({
   awaitDynamicConfig: true,
   connectRouter: true,
   scenarios: [
-    scenarios.passthrough({ transport: transport('black') }),
+    scenarios.passthrough({ transport: transport('grey') }),
     scenarios.dynamicConfig({
       transport: transport('green'),
       configLoader,
       interval: 5000,
     }),
-    moduleUpdater
+    moduleUpdater({
+      tags,
+      interval: 10000,
+      transport: transport('cyan')
+    })
   ],
   features: [
     ({ server, logger, router, federatedModules, radpack, ...config }) => {

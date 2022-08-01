@@ -21,12 +21,7 @@
   },
   "dependencies": {
     "@kroger/cx-core-web-server": "2.3.6",
-    "@kroger/kap-federation-alpha-cache": "workspace:^",
-    "@kroger/kap-federation-beta-cache": "workspace:^",
-    "@kroger/kap-federation-canary-cache": "workspace:^",
     "@kroger/kap-federation-controller": "workspace:^",
-    "@kroger/kap-federation-latest-cache": "workspace:^",
-    "@kroger/kap-federation-stable-cache": "workspace:^",
     "@kroger/kap-test-module-a": "^1",
     "fs-extra": "^10.1.0"
   }
