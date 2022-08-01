@@ -3,10 +3,8 @@ import bodyparser from 'koa-bodyparser'
 import { start, scenarios, features, logging, ConfigurationLoader,
   FileConfigurationSource
  } from '@kroger/cx-core-web-server'
-import { CHUNK_PATH, MANIFEST_PATH } from '@kroger/kap-federation-controller'
-import chunkMiddleware from './routes/chunk.mjs'
-import { getManifest, postManifest } from './routes/manifest.mjs'
-import moduleUpdater from './scenarios/update-federation.mjs'
+import moduleUpdater from './lib/scenario.mjs'
+import federationFeature from './lib/feature.mjs'
 
 const { composeBindings, map } = logging
 // ----------------------------------------------------------------------------
@@ -18,15 +16,6 @@ const transport =
     const logMethod = map[level] || 'debug'
     // eslint-disable-next-line
     console[logMethod](chalk[`${color}`](`[${sender}]`), rest)
-}
-
-// ----------------------------------------------------------------------------
-// modules - with a few non-breaking changes to configuration loader, we could 
-// make this a configureable list.
-// ----------------------------------------------------------------------------
-const federatedModules = {
-  '@kroger/kap-test-module-a':  `../../modules/module-a/dist/radpack/`,
-  '@kroger/kap-test-module-b':  `../../modules/module-b/dist/radpack/`,
 }
 
 // ----------------------------------------------------------------------------
@@ -82,46 +71,7 @@ start({
     })
   ],
   features: [
-    ({ server, logger, router, federation, ...config }) => {
-      //should probably move this to a composed /radpack route group 
-      server.use(bodyparser())
-      
-      //TODO: move the router.s into routes, pass in router
-      router.get(
-        `${CHUNK_PATH}/:tag/*chunk`,
-        composeBindings(
-          {
-            category: 'radpack',
-            subcategory: 'chunk',
-          },
-          chunkMiddleware({ federatedModules: federation, config })
-        )
-      )
-
-      //TODO: move the router.s into routes, pass in router
-      router.get(
-        `${MANIFEST_PATH}/:tag/*module`,
-        composeBindings(
-          {
-            category: 'radpack',
-            subcategory: 'manifest',
-          },
-          getManifest({ federatedModules: federation, config })
-        )
-      ) 
-
-      //TODO: move the router.s into routes, pass in router
-      router.post(
-        `${MANIFEST_PATH}`,
-        composeBindings(
-          {
-            category: 'radpack',
-            subcategory: 'custom-manifest',
-          },
-          postManifest({ federatedModules: federation, config })
-        )
-      ) 
-    }
+    federationFeature({ tags })
   ],
   
 })

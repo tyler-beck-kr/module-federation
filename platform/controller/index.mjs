@@ -32,30 +32,19 @@ let controllerInitialization
   * encapsulates radpack.register, currently returns all 
   * manifest with all known federated modules
   * 
-  * TODO: only return manifest with exports that are relevant to an app.
-  * limitations --- Radpack does not currently honor all fetch options, so we're limited to GET requests
-  * Options:
-  * 1) Static configuration for each application - straightforward implementation, opportunity for runtime config mismatches
-  * 2) register with multiple urls... this will work but as the number of federated modules an app uses increases it will become untenable
-  * 3) Dual request, post list, return hash then get manifest based on hash (lots of hoops for this option)
-  * 4) Post list, return custom - not supported by radpack as of @radpack/core@1.0.4 
-  *  EG: {
-  *   method: 'POST',
-  *   headers: { 'Content-Type': 'application/json' },
-  *   body: JSON.stringify(modules)
-  *  }
+  * 
   * @export
   * @param {*} url federation module server root url
   * @param {boolean} [reload=false] override existing registration and reload. needs to be tested
   * @return {*} 
   */
-export async function initialize({ manifest, moduleRegistry, reload = false}) {
+export async function initialize({ manifestUri, moduleRegistry, reload = false}) {
     
       // only initiate registration if it hasn't been called yet or if we are forcing a reload
       if (reload || !controllerInitialization) {
         // structure registration
         controllerInitialization = radpack.register({ 
-          url: `${manifest}`,
+          url: manifestUri,
           vars: {
             baseUrl:  `${moduleRegistry}${CHUNK_PATH}`
           }
@@ -65,7 +54,7 @@ export async function initialize({ manifest, moduleRegistry, reload = false}) {
       // This allows us to execute the same call across multiple locations
       return await controllerInitialization
     }
-  
+
 
 /**
  * Federated Modules should extend this class to take advantage of async implementation loading

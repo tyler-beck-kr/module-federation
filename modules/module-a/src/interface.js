@@ -1,10 +1,12 @@
 import { HybridFederatedModule } from '@kroger/kap-federation-controller'
+
+const MAJOR_VERSION = '1' //TODO: automagically set this value in the build
  
 class ModuleA extends HybridFederatedModule {
 
   constructor() {
     super({
-      id: '@kroger/kap-test-module-a/implementation',
+      id: `@kroger/kap-test-module-a@^${MAJOR_VERSION}/implementation`,
       asyncDefinition: {
         getMessage: { fn: true },
         getNumbers: { fn: true },
@@ -21,7 +23,7 @@ class ModuleA extends HybridFederatedModule {
 
 }
 
-// we don't need to export the class itself, just use it for its async tricks
+//in this example we don't need to export the class itself, just use it for its async tricks
 const instance = new ModuleA()
 
 export default instance

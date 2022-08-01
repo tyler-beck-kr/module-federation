@@ -14,8 +14,15 @@ const { constants:LOG, Logger }  = logging
 const { Scenario } = scenarios
 const asyncExec = promisify(exec)
 
+/**
+ * this is the top level scenario definition
+ *
+ * @param {*} { tags, transport }
+ */
 const scenario = ({ tags, transport }) =>
   (dynamicConfiguration = {}) => {
+
+    //scenarios execute in their own scope so we need our own logger
     const log = new Logger({
       level: dynamicConfiguration.federationLogLevel || LOG.DEBUG,
       transport,
@@ -36,6 +43,8 @@ const scenario = ({ tags, transport }) =>
       configLoader.attachResources({ logger: log })
     })
 
+    // watch the federation configuration for changes and update modules list if it changes
+    // defer doing the work to the async scenario callback
     dynamicConfiguration.watch('federation', (list) => {
       log.debug('apply module config change')
       if (JSON.stringify(list) !== JSON.stringify(modules)) {
@@ -44,10 +53,12 @@ const scenario = ({ tags, transport }) =>
       }
     })
 
+    //return a Scenario instance
     return new Scenario({
       name: 'federation',
       persist: true,
       callback: async (data) => {
+        
         // only update if modules have changed
         if (modulesLastChanged > lastUpdate) {
           lastUpdate = Date.now()

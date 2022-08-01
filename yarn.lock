@@ -54,7 +54,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kroger/kap-configuration-loaders@npm:^0.1.1 ":
+"@kroger/kap-configuration-loaders@npm:^0.1.2":
   version: 0.1.2
   resolution: "@kroger/kap-configuration-loaders@npm:0.1.2::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-configuration-loaders%2F-%2F%40kroger%2Fkap-configuration-loaders-0.1.2.tgz"
   dependencies:
@@ -163,10 +163,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kroger/kap-test-module-a@workspace:modules/module-a"
   dependencies:
-    "@radpack/core": ^1.0.3
-    "@radpack/rollup-plugin": ^1.0.3
-    "@rollup/plugin-node-resolve": ^11.2.0
-    rollup: ^2.45.2
+    "@radpack/core": ^1.0.4
+    "@radpack/rollup-plugin": ^1.0.4
+    "@rollup/plugin-node-resolve": ^13.3.0
+    rollup: ^2.77.2
   peerDependencies:
     "@kroger/kap-federation-controller": "workspace:^"
   languageName: unknown
@@ -176,10 +176,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kroger/kap-test-module-b@workspace:modules/module-b"
   dependencies:
-    "@radpack/core": ^1.0.3
-    "@radpack/rollup-plugin": ^1.0.3
-    "@rollup/plugin-node-resolve": ^11.2.0
-    rollup: ^2.45.2
+    "@radpack/core": ^1.0.4
+    "@radpack/rollup-plugin": ^1.0.4
+    "@rollup/plugin-node-resolve": ^13.3.0
+    rollup: ^2.77.2
   peerDependencies:
     "@kroger/kap-federation-controller": "workspace:^"
   languageName: unknown
@@ -190,14 +190,14 @@ __metadata:
   resolution: "@kroger/kap-test-module-server@workspace:applications/module-server"
   dependencies:
     "@kroger/cx-core-web-server": 2.3.6
-    "@kroger/kap-configuration-loaders": "^0.1.1 "
+    "@kroger/kap-configuration-loaders": ^0.1.2
     "@kroger/kap-federation-alpha-cache": "workspace:^"
     "@kroger/kap-federation-beta-cache": "workspace:^"
     "@kroger/kap-federation-canary-cache": "workspace:^"
     "@kroger/kap-federation-controller": "workspace:^"
     "@kroger/kap-federation-latest-cache": "workspace:^"
     "@kroger/kap-federation-stable-cache": "workspace:^"
-    "@yarnpkg/parsers": ^2.5.0
+    "@yarnpkg/parsers": ^3.0.0-rc.14
     chalk: ^4.1.2
     fs-extra: ^10.1.0
     koa-bodyparser: ^4.3.0
@@ -236,7 +236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radpack/core@npm:^1.0.3, @radpack/core@npm:^1.0.4":
+"@radpack/core@npm:^1.0.4":
   version: 1.0.4
   resolution: "@radpack/core@npm:1.0.4"
   dependencies:
@@ -245,7 +245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radpack/rollup-plugin@npm:^1.0.3":
+"@radpack/rollup-plugin@npm:^1.0.4":
   version: 1.0.4
   resolution: "@radpack/rollup-plugin@npm:1.0.4"
   dependencies:
@@ -288,23 +288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^11.2.0":
-  version: 11.2.1
-  resolution: "@rollup/plugin-node-resolve@npm:11.2.1"
-  dependencies:
-    "@rollup/pluginutils": ^3.1.0
-    "@types/resolve": 1.17.1
-    builtin-modules: ^3.1.0
-    deepmerge: ^4.2.2
-    is-module: ^1.0.0
-    resolve: ^1.19.0
-  peerDependencies:
-    rollup: ^1.20.0||^2.0.0
-  checksum: 6f3b3ecf9a0596a5db4212984bdeb13bb7612693602407e9457ada075dea5a5f2e4e124c592352cf27066a88b194de9b9a95390149b52cf335d5b5e17b4e265b
-  languageName: node
-  linkType: hard
-
-"@rollup/plugin-node-resolve@npm:^13.1.3":
+"@rollup/plugin-node-resolve@npm:^13.1.3, @rollup/plugin-node-resolve@npm:^13.3.0":
   version: 13.3.0
   resolution: "@rollup/plugin-node-resolve@npm:13.3.0"
   dependencies:
@@ -534,13 +518,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/parsers@npm:^2.5.0":
-  version: 2.5.1
-  resolution: "@yarnpkg/parsers@npm:2.5.1"
+"@yarnpkg/parsers@npm:^3.0.0-rc.14":
+  version: 3.0.0-rc.14
+  resolution: "@yarnpkg/parsers@npm:3.0.0-rc.14"
   dependencies:
     js-yaml: ^3.10.0
     tslib: ^1.13.0
-  checksum: 42f98b8bd635add304ce392c6f600b46e40c2c4429d7b6c38b70f50b5fd6a854dd2369e0987b70546a3c8f690d280f040a885b35acfde891f5e173fc3f974277
+  checksum: 9e6bdb99628f5b4c44af485843be9070bd49a7a5eed4e673cd374efbbcdc43afa2577a39858b1debb359b7b498b637c7e12930311b40f8c5d02d3a5544260150
   languageName: node
   linkType: hard
 
@@ -699,7 +683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"builtin-modules@npm:^3.0.0, builtin-modules@npm:^3.1.0":
+"builtin-modules@npm:^3.0.0":
   version: 3.3.0
   resolution: "builtin-modules@npm:3.3.0"
   checksum: db021755d7ed8be048f25668fe2117620861ef6703ea2c65ed2779c9e3636d5c3b82325bd912244293959ff3ae303afa3471f6a15bf5060c103e4cc3a839749d
@@ -2420,7 +2404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.45.2, rollup@npm:^2.66.1":
+"rollup@npm:^2.66.1, rollup@npm:^2.77.2":
   version: 2.77.2
   resolution: "rollup@npm:2.77.2"
   dependencies:

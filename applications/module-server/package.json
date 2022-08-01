@@ -21,14 +21,14 @@
   },
   "dependencies": {
     "@kroger/cx-core-web-server": "2.3.6",
-    "@kroger/kap-configuration-loaders": "^0.1.1 ",
+    "@kroger/kap-configuration-loaders": "^0.1.2",
     "@kroger/kap-federation-alpha-cache": "workspace:^",
     "@kroger/kap-federation-beta-cache": "workspace:^",
     "@kroger/kap-federation-canary-cache": "workspace:^",
     "@kroger/kap-federation-controller": "workspace:^",
     "@kroger/kap-federation-latest-cache": "workspace:^",
     "@kroger/kap-federation-stable-cache": "workspace:^",
-    "@yarnpkg/parsers": "^2.5.0",
+    "@yarnpkg/parsers": "^3.0.0-rc.14",
     "chalk": "^4.1.2",
     "fs-extra": "^10.1.0",
     "koa-bodyparser": "^4.3.0"
