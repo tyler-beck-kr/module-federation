@@ -1,0 +1,19 @@
+{
+  "exposeSystemRoutes": true,
+  "reportHealth": false,
+
+  "passthroughLogLevel": 300,
+  "serverLogLevel": 300,
+  "systemLogLevel": 300,
+  "internalLogLevel": 300,
+  "requestLogLevel": 300,
+  "dynamicConfigLogLevel": 300,
+  "performanceLogLevel": 300,
+
+  "connectionOptions": {
+    "keepAlive": true,
+    "maxFreeSockets": 100,
+    "timeout": 60000,
+    "rejectUnauthorized": false
+  }
+}

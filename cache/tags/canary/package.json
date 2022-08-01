@@ -1,0 +1,15 @@
+{
+  "name": "@kroger/kap-federation-canary-cache",
+  "version": "1.0.0",
+  "private": true,
+  "description": " Federated Module Server GENERATED cache for canary tag",
+  "packageManager": "yarn@3.2.1",
+  "main": "index.mjs",
+  "type": "module",
+  "author": "Tyler Beck",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@kroger/kap-test-module-a": "workspace:^",
+    "@kroger/kap-test-module-b": "workspace:^"
+  }
+}

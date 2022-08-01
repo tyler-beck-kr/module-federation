@@ -1,0 +1,22 @@
+[
+  {
+    "id": "@kroger/kap-test-module-a",
+    "tags": {
+      "alpha": "alpha",
+      "beta": "workspace:^",
+      "latest": "workspace:^",
+      "canary": "workspace:^",
+      "stable": "workspace:^"
+    }
+  },
+  {
+    "id": "@kroger/kap-test-module-b",
+    "tags": {
+      "alpha": "workspace:^",
+      "beta": "workspace:^",
+      "latest": "workspace:^",
+      "canary": "workspace:^",
+      "stable": "workspace:^"
+    }
+  }    
+]

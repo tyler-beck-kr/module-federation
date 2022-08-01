@@ -1,0 +1,27 @@
+{
+  "name": "federation-poc",
+  "version": "2.0.22",
+  "description": "Proof of Concept. Ideas for improving the web platform. ",
+  "author": "Tyler Beck",
+  "license": "Private",
+  "private": true,
+  "packageManager": "yarn@3.2.1",
+  "engines": {
+    "node": ">=16.16.0"
+  },
+  "engineStrict": true,
+  "workspaces": [
+    "platform/*",
+    "applications/*",
+    "modules/*",
+    "cache/tags/*"
+  ],
+  "scripts": {
+    "kap:logs": "cat .kap/run-debug-log.txt",
+    "kap:run": "yarn kap run -a --script",
+    "kap:changed": "yarn kap run --script",
+    "start": "cd applications/module-server && yarn start",
+    "start:app": "cd applications/app && yarn start",
+    "build": "cd modules/module-a && yarn build && cd ../module-b && yarn build"
+  }
+}

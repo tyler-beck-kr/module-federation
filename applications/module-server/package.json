@@ -1,0 +1,31 @@
+{
+  "name": "@kroger/kap-test-module-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": " Federated Ecosystem Example Controller",
+  "packageManager": "yarn@3.2.1",
+  "main": "./lib/server/index.js",
+  "module": "./lib/server/index.js",
+  "browser": "./lib/client/index.js",
+  "jest:main": "src/index.js",
+  "type": "module",
+  "exports": {
+    "node": "./lib/server/index.js",
+    "server": "./lib/server/index.js",
+    "default": "./lib/client/index.js"
+  },
+  "author": "Tyler Beck",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "@kroger/cx-core-web-server": "2.3.6",
+    "@kroger/kap-configuration-loaders": "^0.1.1 ",
+    "@kroger/kap-federated-module-feature": "*",
+    "@kroger/kap-federation-controller": "*",
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.1.0",
+    "koa-bodyparser": "^4.3.0"
+  }
+}

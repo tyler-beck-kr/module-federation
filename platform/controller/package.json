@@ -1,0 +1,15 @@
+{
+  "name": "@kroger/kap-federation-controller",
+  "version": "0.1.0",
+  "private": true,
+  "description": " Federated Ecosystem Controller",
+  "packageManager": "yarn@3.2.1",
+  "main": "index.mjs",
+  "type": "module",
+  "author": "Tyler Beck",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@radpack/core": "^1.0.4",
+    "@radpack/server": "^1.0.4"
+  }
+}
