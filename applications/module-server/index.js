@@ -33,7 +33,7 @@ const configLoader = new ConfigurationLoader({
   federation: new FileConfigurationSource({
     id: 'federatedModules',
     path: './config/federated-modules.json',
-    ttl: 10000,
+    ttl: 60000,
   }),
 
 })
@@ -66,7 +66,7 @@ start({
     }),
     moduleUpdater({
       tags,
-      interval: 10000,
+      interval: 120000,
       transport: transport('cyan')
     })
   ],

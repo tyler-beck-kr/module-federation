@@ -34,7 +34,7 @@ const scenario = ({ tags, transport }) =>
     // can this be moved into scenario state?
     let modules = []
     let modulesLastChanged = 0
-    let lastUpdate = 0 // set this < last change so that things update on start.
+    let lastModuleUpdate = 0
 
     // we should consider inverting this to -> loglevels.federation, I think we can still
     // watch one level deeper, but need to verify
@@ -59,9 +59,9 @@ const scenario = ({ tags, transport }) =>
       persist: true,
       callback: async (data) => {
         
-        // only update if modules have changed
-        if (modulesLastChanged > lastUpdate) {
-          lastUpdate = Date.now()
+        // only update package.jsons if modules have changed
+        if (modulesLastChanged > lastModuleUpdate) {
+          lastModuleUpdate = Date.now()
           log.debug("update federation modules")
 
           // 1) update package jsons in caches
@@ -79,31 +79,37 @@ const scenario = ({ tags, transport }) =>
     
             await writeJSON(pkgPath, pkg, { spaces: "  "})
           }
-
-          // 2) modify yarn lock if needed.
-          // TODO: check yarn behavior when installing packages with tags,
-          // does yarn update the lockfile on install if a new tag is pushed?
-          // if it does not, we will need to parse the yarn.lock file and 
-          // remove entries for the module cache workspaces so that yarn will 
-          // resolve new entries.
-        
-          // TODO: get lock file path from configuration
-          // const lockFilePath = 'yarn.lock'
-          // const contents = await readFile(lockFilePath, { encoding: 'utf8' })
-          // const lockFile = parseSyml(contents)
-          // console.log(lockFile)
-
-          // 3) execute yarn install to get new module zips
-          try {
-            await asyncExec('yarn')
-            log.info('module update complete')
-          } catch (e) {
-            log.warn({
-              msg: "module upate failed",
-              stdout: e.stdout
-            })
-          }
         }
+
+        // 2) modify yarn lock if needed.
+        // TODO: check yarn behavior when installing packages with tags,
+        // does yarn update the lockfile on install if a new tag is pushed?
+        // if it does not, we will need to parse the yarn.lock file and 
+        // remove entries for the module cache workspaces so that yarn will 
+        // resolve new entries.
+      
+        // TODO: get lock file path from configuration
+        // const lockFilePath = 'yarn.lock'
+        // const contents = await readFile(lockFilePath, { encoding: 'utf8' })
+        // const lockFile = parseSyml(contents)
+        // console.log(lockFile)
+
+        // 3) execute yarn install to get new module zips
+        //    this has been optimized so just run it every iteration
+        try {
+          const { stdout, stderr } = await asyncExec('yarn')
+          log.debug({
+            msg: 'module update complete',
+            stdout, 
+            stderr
+          })
+        } catch (e) {
+          log.warn({
+            msg: "module update failed",
+            stdout: e.stdout
+          })
+        }
+        
 
       },
       reducer: (state = {}, action, { play }) => {

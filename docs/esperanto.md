@@ -13,7 +13,7 @@ We have also made significant efforts to optimize the developer experience and t
 Module federation is a relatively new pattern that will enable us to break apart the monolithic build and deploy, thus eliminating the constraints of our current operational processes. It will provide teams the ability to develop, build, validate and deploy code independently of the core application while maintaining the benefits of the SPA architecture. With module federation we will be able to deliver features and fixes to our customers more frequently with higher confidence and lower risk.
 
 ## What Is Module Federation?
-Module federation allows us to compose parts of an application at run-time from independently developed, built and deployed javascript modules. A federated module is similar to a "chunk" artifact of the current Webpack build, but it is decoupled from the build and can therefor be updated independently. A registry of federated modules  provides the server and/or web application a map of module sources. A federated module "deployment" is essentially a configuration change that results in the application loading a new remote asset.
+Module federation allows us to compose parts of an application at run-time from independently developed, built and deployed javascript modules. A federated module is similar to a "chunk" artifact of the current Webpack build, but it is decoupled from the build and can therefor be updated independently. A registry of federated modules provides the server and/or web application a map of module sources. A federated module "deployment" is essentially a configuration change that results in the application loading a new remote asset.
 
 
 ### Traditional Build
@@ -96,7 +96,7 @@ Module Federation allows us to:
 - Give teams more ownership of when and how their changes make it to production
 - Quickly rollback or fix problematic modules
 - Granular rollbacks, only roll back the modules that have issues
-- Targeted hot-fixes, if a module needs to be hot-fixed it won't require a redeploy
+- Targeted hot-fixes, if a module needs to be hot-fixed it won't require an application redeploy
 - Enables advanced operational patterns
    - A/B testing of versions
    - Canary Deployments
@@ -117,7 +117,7 @@ A small team consisting of one or more developers would be able to execute all t
 ### Phase 1 - Foundation & Testing
 - [ ] 🖌 A manually triggered workflow that targets a single federated module in the monorepo
 - [ ] 🖌 POC federated module version management via AMP
-- [ ] A non-customer facing route that utilizes the federated module. 
+- [ ] A non-customer facing route/library that utilizes the federated module. 
 - [ ] 🖌 Determine if/how we should deliver non-js assets currently associated with routes through a federated module, though we may not have a final solution in place.
 - [ ] 🖌 Demonstrate a code update in production
 - [ ] 🖌 Demonstrate a rollback in production
@@ -133,9 +133,8 @@ A small team consisting of one or more developers would be able to execute all t
 - [ ] Target initial customer facing module(s) for federation
 - [ ] 🖌 Monitor and measure
 - [ ] 🌱 Begin Incorporate KAP Web Client for shared capabilities targeting analytics
-
  
-### Phase 3 - Rollout
+ ### Phase 3 - Rollout
 - [ ] Target AMP components for federation
 - [ ] Target non-amp modules
 - [ ] Continue to monitor and measure
@@ -146,4 +145,4 @@ A small team consisting of one or more developers would be able to execute all t
 - [ ] Only core application code should be excluded from federation
 
 ## Summary
-Module federation in Esperanto will enable us to eliminate operational bottlenecks and deliver value to customers with more confidence, less risk, at a higher velocity than we've ever achieved.  A small team or a few dedicated individuals will be able to make the necessary changes across the entire project with little to no negative impact to ongoing work.  Furthermore, depending on the number of  engineers and timing/alignment of the KWC efforts, it is conceivable that this effort could be rolled out across all banner product domains in one quarter.  Given the value that module federation provides and the opportunities it will unlock for both customers and development teams, we should prioritize its implementation in Esperanto.
+Module federation in Esperanto will enable us to eliminate operational bottlenecks and deliver value to customers with more confidence, less risk, at a higher velocity than we've ever achieved.  A small team or a few dedicated individuals will be able to make the necessary changes across the entire project with little to no negative impact to ongoing work.  Furthermore, depending on the number of engineers and timing/alignment of the KWC efforts, it is conceivable that this effort could be rolled out across all banner product domains in one quarter.  Given the value that module federation provides and the opportunities it will unlock for both customers and development teams, we should prioritize its implementation in Esperanto.
