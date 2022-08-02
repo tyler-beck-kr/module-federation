@@ -36,7 +36,7 @@ const getManifest = async () => {
     method: 'post',
     body: JSON.stringify({
       '@kroger/kap-test-module-a': 'stable',
-      '@kroger/kap-test-module-b': 'latest'
+      '@kroger/kap-test-module-b': 'stable'
     }),
     headers: {'Content-Type': 'application/json'}
   })

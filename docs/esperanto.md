@@ -146,3 +146,11 @@ A small team consisting of one or more developers would be able to execute all t
 
 ## Summary
 Module federation in Esperanto will enable us to eliminate operational bottlenecks and deliver value to customers with more confidence, less risk, at a higher velocity than we've ever achieved.  A small team or a few dedicated individuals will be able to make the necessary changes across the entire project with little to no negative impact to ongoing work.  Furthermore, depending on the number of engineers and timing/alignment of the KWC efforts, it is conceivable that this effort could be rolled out across all banner product domains in one quarter.  Given the value that module federation provides and the opportunities it will unlock for both customers and development teams, we should prioritize its implementation in Esperanto.
+
+
+## Questions
+- tree shaking, optimization?
+- structure
+
+## Notes
+- scope is limited to esperanto modules, not intended to share external to esperanto.
