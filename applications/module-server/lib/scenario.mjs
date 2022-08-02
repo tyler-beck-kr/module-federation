@@ -40,7 +40,6 @@ const scenario = ({ tags, transport }) =>
     // watch one level deeper, but need to verify
     dynamicConfiguration.watch('federationLogLevel', (value) => {
       log.level = value
-      configLoader.attachResources({ logger: log })
     })
 
     // watch the federation configuration for changes and update modules list if it changes
