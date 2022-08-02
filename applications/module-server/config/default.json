@@ -9,7 +9,7 @@
   "requestLogLevel": 300,
   "dynamicConfigLogLevel": 300,
   "performanceLogLevel": 300,
-  "federationLogLevel": 200,
+  "federationLogLevel": 300,
 
   "connectionOptions": {
     "keepAlive": true,

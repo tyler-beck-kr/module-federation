@@ -19,6 +19,7 @@ const keypress = async () => {
 //this is the application entry point
 const demoApplication = async () => {
 
+const getManifest = async () => {
   /**  load customized manifest from module server
    * Radpack does not currently pass through the fetch options
    * required to request a manifest via post with body. So our options are:
@@ -42,16 +43,29 @@ const demoApplication = async () => {
   const manifest = await response.json()
   await writeJSON('./radpack.json', manifest)
 
+  return manifest
+}
+
+
+const register = async () => {
   // initialize with the file we just created.  This will register the 
   // configuration with radpack and enable us to load the specified implementations.
   await initialize({
     manifestUri: './radpack.json',
     moduleRegistry: 'http://localhost:3000'
   })
-
+}
 
   // This was getting repetative so... array iteration time!
   const demoSteps = [
+    {
+      title: `initialize manifest`,
+      fn: async () => await getManifest()
+    },
+    {
+      title: `register manifest with federation controller`,
+      fn: async () => await register()
+    },
     {
       title: `call a function that has been defined statically`,
       fn: () => a.status()
