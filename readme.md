@@ -11,6 +11,15 @@ yarn
 # build federated modules
 yarn build 
 
-
+# start module registry server
+yarn start
 
 ```
+
+In a new terminal instance (leave other one running)
+```sh
+# start demo application
+yarn start:app
+```
+
+keep pressing enter :-)
