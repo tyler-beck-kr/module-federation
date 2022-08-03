@@ -58,7 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       },\
       {\
         "name": "@kroger/kap-test-module-c",\
-        "reference": "workspace:modules/module-b copy"\
+        "reference": "workspace:modules/module-c"\
       },\
       {\
         "name": "@kroger/kap-federation-controller",\
@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@kroger/kap-test-app-server", ["workspace:applications/app"]],\
       ["@kroger/kap-test-module-a", ["virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-a", "workspace:modules/module-a"]],\
       ["@kroger/kap-test-module-b", ["virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-b", "workspace:modules/module-b"]],\
-      ["@kroger/kap-test-module-c", ["workspace:modules/module-b copy"]],\
+      ["@kroger/kap-test-module-c", ["workspace:modules/module-c"]],\
       ["@kroger/kap-test-module-server", ["workspace:applications/module-server"]],\
       ["federation-poc", ["workspace:."]]\
     ],\
@@ -148,7 +148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],\
       [\
         "@kroger/kap-test-module-c",\
-        "workspace:modules/module-b copy"\
+        "workspace:modules/module-c"\
       ],\
       [\
         "@kroger/kap-test-module-server",\
@@ -1464,10 +1464,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@kroger/kap-test-module-c", [\
-        ["workspace:modules/module-b copy", {\
-          "packageLocation": "./modules/module-b copy/",\
+        ["workspace:modules/module-c", {\
+          "packageLocation": "./modules/module-c/",\
           "packageDependencies": [\
-            ["@kroger/kap-test-module-c", "workspace:modules/module-b copy"],\
+            ["@kroger/kap-test-module-c", "workspace:modules/module-c"],\
             ["@radpack/core", "npm:1.0.4"],\
             ["@radpack/rollup-plugin", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:1.0.4"],\
             ["@rollup/plugin-node-resolve", "virtual:9caf42103dea092b0468c56b7e8efc19a3edf45efd628f6cf52cce3195d69d55b13b6b71abbe7b472e604f1d777a9aa55f3b6bcea9d1a9d598ee6a1b392a6a82#npm:13.3.0"],\

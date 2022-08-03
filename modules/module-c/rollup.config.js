@@ -12,7 +12,11 @@ export default [
         preferBuiltins: true,
        }),
       radpack({ 
-        // register: 'http://localhost:3000/federation/manifest/latest/@kroger/kap-test-module-a',
+        register: [
+          'http://localhost:3000/federation/manifest/latest/@kroger/kap-test-module-a',
+          'http://localhost:3000/federation/manifest/latest/@kroger/kap-test-module-b',
+          // 'http://localhost:3000/federation/manifest/latest/@kroger/kap-test-module-c',
+        ]          
       })
     ],
   },

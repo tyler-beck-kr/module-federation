@@ -22,6 +22,6 @@
     "kap:changed": "yarn kap run --script",
     "start": "cd applications/module-server && yarn start",
     "start:app": "cd applications/app && yarn start",
-    "build": "cd modules/module-a && yarn build && cd ../module-b && yarn build"
+    "build": "cd modules/module-a && yarn build && cd ../module-b && yarn build && cd ../module-c && yarn build"
   }
 }
