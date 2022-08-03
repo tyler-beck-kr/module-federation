@@ -2,7 +2,7 @@
   {
     "id": "@kroger/kap-test-module-a",
     "tags": {
-      "alpha": "workspace:^",
+      "alpha": "1.2.0",
       "beta": "workspace:^",
       "latest": "workspace:^",
       "canary": "workspace:^",

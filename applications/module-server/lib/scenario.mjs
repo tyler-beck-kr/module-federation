@@ -127,7 +127,7 @@ export default ({
     scenario({ tags, transport }),
     {
       playInterval: interval,
-      playOnStart: false,
+      playOnStart: true,
     },
   ]
 }

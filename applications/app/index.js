@@ -1,5 +1,6 @@
 import { initialize } from '@kroger/kap-federation-controller';
 import a from '@kroger/kap-test-module-a'
+import b from '@kroger/kap-test-module-b'
 import fetch from 'node-fetch'
 import chalk from 'chalk';
 import fs from 'fs-extra'
@@ -77,6 +78,10 @@ const register = async () => {
     {
       title: `let's see what happens when I set a member of "a"`,
       fn: () => { a.message = "foo" }
+    },
+    {
+      title: `time to load b's async implementation`,
+      fn: async () => await b.load()
     },
     {
       title: `time to load a's async implementation`,

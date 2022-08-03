@@ -16,7 +16,8 @@
   "author": "Tyler Beck",
   "license": "UNLICENSED",
   "peerDependencies": {
-    "@kroger/kap-federation-controller": "workspace:^"
+    "@kroger/kap-federation-controller": "workspace:^",
+    "@kroger/kap-test-module-a": "^1"
   },
   "devDependencies": {
     "@radpack/core": "^1.0.4",
