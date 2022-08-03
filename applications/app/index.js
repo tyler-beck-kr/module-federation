@@ -67,46 +67,46 @@ const register = async () => {
       title: `register manifest with federation controller`,
       fn: async () => await register()
     },
-    // {
-    //   title: `call a function that has been defined statically`,
-    //   fn: () => a.status()
-    // },
-    // {
-    //   title: `let's see what happens when I call an asynchronously defined method on "a"`,
-    //   fn: () => a.getMessage()
-    // },
-    // {
-    //   title: `let's see what happens when I set a member of "a"`,
-    //   fn: () => { a.message = "foo" }
-    // },
     {
-      title: `time to load b's async implementation`,
-      fn: async () => await b.load()
+      title: `call a function that has been defined statically`,
+      fn: () => a.status()
+    },
+    {
+      title: `let's see what happens when I call an asynchronously defined method on "a"`,
+      fn: () => a.getMessage()
+    },
+    {
+      title: `let's see what happens when I set a member of "a"`,
+      fn: () => { a.message = "foo" }
     },
     // {
-    //   title: `time to load a's async implementation`,
-    //   fn: async () => await a.load()
+    //    title: `time to load b's async implementation`,
+    //    fn: async () => await b.load()
     // },
     {
-      title: `check b numbers`,
-      fn: () => b.getNumbers()
+      title: `time to load a's async implementation`,
+      fn: async () => await a.load()
     },
     // {
-    //   title: `call a function with an overriden implementation`,
-    //   fn: () => a.status()
+    //   title: `check b numbers`,
+    //   fn: () => b.getNumbers()
     // },
-    // {
-    //   title: `let's see what happens when I call a method on "a"`,
-    //   fn:() => a.getMessage()
-    // },
-    // {
-    //   title: `let's see what happens when I set a member of "a"`,
-    //   fn: () => { a.message = "a new message" }
-    // },
-    // {
-    //   title: `lets get the message one more time`,
-    //   fn:() => a.getMessage()
-    // }
+    {
+      title: `call a function with an overriden implementation`,
+      fn: () => a.status()
+    },
+    {
+      title: `let's see what happens when I call a method on "a"`,
+      fn:() => a.getMessage()
+    },
+    {
+      title: `let's see what happens when I set a member of "a"`,
+      fn: () => { a.message = "a new message" }
+    },
+    {
+      title: `lets get the message one more time`,
+      fn:() => a.getMessage()
+    }
   ]
 
   // iterate through the demo steps waiting for key press before each result and after each step.
