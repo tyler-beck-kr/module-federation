@@ -187,6 +187,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@kroger/kap-test-module-c@workspace:modules/module-b copy":
+  version: 0.0.0-use.local
+  resolution: "@kroger/kap-test-module-c@workspace:modules/module-b copy"
+  dependencies:
+    "@radpack/core": ^1.0.4
+    "@radpack/rollup-plugin": ^1.0.4
+    "@rollup/plugin-node-resolve": ^13.3.0
+    rollup: ^2.77.2
+  peerDependencies:
+    "@kroger/kap-federation-controller": "workspace:^"
+    "@kroger/kap-test-module-a": ^1
+  languageName: unknown
+  linkType: soft
+
 "@kroger/kap-test-module-server@workspace:applications/module-server":
   version: 0.0.0-use.local
   resolution: "@kroger/kap-test-module-server@workspace:applications/module-server"

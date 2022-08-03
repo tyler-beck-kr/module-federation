@@ -1,0 +1,28 @@
+{
+  "name": "@kroger/kap-test-module-c",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test Federated Module C",
+  "packageManager": "yarn@3.2.1",
+  "main": "./src/interface.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/interface.js",
+    "./manifest": "./dist/radpack/radpack.json"
+  },
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js"
+  },
+  "author": "Tyler Beck",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "@kroger/kap-federation-controller": "workspace:^",
+    "@kroger/kap-test-module-a": "^1"
+  },
+  "devDependencies": {
+    "@radpack/core": "^1.0.4",
+    "@radpack/rollup-plugin": "^1.0.4",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.77.2"
+  }
+}

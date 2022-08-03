@@ -1,6 +1,7 @@
-let message = "initial message"
+let message = "initial message from b"
 const getMessage = () => message
-const getNumbers = () => [ 7, 14, 21 ]
+// V1 use of another hybrid module in the context of the implementation
+const getNumbers = function() { return this.a.getNumbers().map((n) => n*2) }
 
 export default {
   getMessage: { value: getMessage },
