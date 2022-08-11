@@ -3,6 +3,8 @@ import b from '@kroger/kap-test-module-b/implementation'
 let message = "initial message"
 const getMessage = () => message
 const getNumbers = () => [ 7, 14, 21 ]
+
+//this is just the implementation
 const myB = b
 
 export default {

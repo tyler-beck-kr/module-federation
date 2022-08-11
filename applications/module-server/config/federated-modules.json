@@ -2,11 +2,11 @@
   {
     "id": "@kroger/kap-test-module-a",
     "tags": {
-      "alpha": "1.2.0",
+      "alpha": "workspace:^",
       "beta": "workspace:^",
-      "latest": "workspace:^",
+      "latest": "latest",
       "canary": "workspace:^",
-      "stable": "workspace:^"
+      "stable": "1.2"
     }
   },
   {

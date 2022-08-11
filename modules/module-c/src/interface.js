@@ -1,5 +1,5 @@
 import { HybridFederatedModule } from '@kroger/kap-federation-controller'
-import a from '@kroger/kap-test-module-a'
+import a from '@kroger/kap-test-module-a/implementation'
 
 const MAJOR_VERSION = '0' //TODO: automagically set this value in the build
 
@@ -17,7 +17,6 @@ class ModuleB extends HybridFederatedModule {
 
     // add reference to another hybrid module here
     this.a = a
-    
 
   }
 
@@ -34,7 +33,7 @@ class ModuleB extends HybridFederatedModule {
     // we can technically return whatever we want
     return result[0]
   }
-  
+
 }
 
 // we don't need to export the class itself, just use it for its async tricks

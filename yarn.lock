@@ -83,7 +83,7 @@ __metadata:
   resolution: "@kroger/kap-federation-alpha-cache@workspace:cache/tags/alpha"
   dependencies:
     "@kroger/kap-federation-controller": "*"
-    "@kroger/kap-test-module-a": 1.2.0
+    "@kroger/kap-test-module-a": "workspace:^"
     "@kroger/kap-test-module-b": "workspace:^"
   languageName: unknown
   linkType: soft
@@ -160,7 +160,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@kroger/kap-test-module-a@1.2.0, @kroger/kap-test-module-a@^1, @kroger/kap-test-module-a@workspace:^, @kroger/kap-test-module-a@workspace:modules/module-a":
+"@kroger/kap-test-module-a@^1, @kroger/kap-test-module-a@workspace:^, @kroger/kap-test-module-a@workspace:modules/module-a":
   version: 0.0.0-use.local
   resolution: "@kroger/kap-test-module-a@workspace:modules/module-a"
   dependencies:
