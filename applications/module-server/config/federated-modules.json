@@ -4,9 +4,9 @@
     "tags": {
       "alpha": "workspace:^",
       "beta": "workspace:^",
-      "latest": "latest",
+      "latest": "workspace:^",
       "canary": "workspace:^",
-      "stable": "1.2"
+      "stable": "workspace:^"
     }
   },
   {

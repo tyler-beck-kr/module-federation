@@ -36,7 +36,7 @@ const getManifest = async () => {
   const response = await fetch('http://localhost:3000/federation/manifest', {
     method: 'post',
     body: JSON.stringify({
-      '@kroger/kap-test-module-a': 'alpha',
+      '@kroger/kap-test-module-a': 'stable',
       '@kroger/kap-test-module-b': 'stable'
     }),
     headers: {'Content-Type': 'application/json'}
@@ -66,30 +66,30 @@ const register = async () => {
       title: `register manifest with federation controller`,
       fn: async () => await register()
     },
-    // {
-    //   title: `call a function that has been defined statically`,
-    //   fn: () => a.status()
-    // },
-    // {
-    //   title: `let's see what happens when I call an asynchronously defined method on "a"`,
-    //   fn: () => a.getMessage()
-    // },
-    // {
-    //   title: `let's see what happens when I set a member of "a"`,
-    //   fn: () => { a.message = "foo" }
-    // },
     {
-       title: `time to load b's async implementation`,
-       fn: async () => await b.load()
+      title: `call a function that has been defined statically`,
+      fn: () => a.status()
     },
+    {
+      title: `let's see what happens when I call an asynchronously defined method on "a"`,
+      fn: () => a.getMessage()
+    },
+    {
+      title: `let's see what happens when I set a member of "a"`,
+      fn: () => { a.message = "foo" }
+    },
+    // {
+    //    title: `time to load b's async implementation`,
+    //    fn: async () => await b.load()
+    // },
     {
       title: `time to load a's async implementation`,
       fn: async () => await a.load()
     },
-    {
-      title: `check b numbers`,
-      fn: () => b.getNumbers()
-    },
+    // {
+    //   title: `check b numbers`,
+    //   fn: () => b.getNumbers()
+    // },
     {
       title: `call a function with an overriden implementation`,
       fn: () => a.status()
@@ -98,14 +98,14 @@ const register = async () => {
       title: `let's see what happens when I call a method on "a"`,
       fn:() => a.getMessage()
     },
-    // {
-    //   title: `let's see what happens when I set a member of "a"`,
-    //   fn: () => { a.message = "a new message" }
-    // },
-    // {
-    //   title: `lets get the message one more time`,
-    //   fn:() => a.getMessage()
-    // }
+    {
+      title: `let's see what happens when I set a member of "a"`,
+      fn: () => { a.message = "a new message" }
+    },
+    {
+      title: `lets get the message one more time`,
+      fn:() => a.getMessage()
+    }
   ]
 
   // iterate through the demo steps waiting for key press before each result and after each step.
