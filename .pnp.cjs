@@ -25,6 +25,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:applications/app"\
       },\
       {\
+        "name": "@kroger/test-clickstream-server",\
+        "reference": "workspace:applications/clickstream"\
+      },\
+      {\
         "name": "@kroger/kap-test-module-server",\
         "reference": "workspace:applications/module-server"\
       },\
@@ -79,6 +83,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@kroger/kap-test-module-b", ["virtual:074572ae93f08fe7f4790c4d041483671656c6f3d0674dbf387b6c842615049aa52e7fe4387c006b4c659b4ddec314c91cc29a5ec659a3c66a71e72b0ae125b1#workspace:modules/module-b", "workspace:modules/module-b"]],\
       ["@kroger/kap-test-module-c", ["workspace:modules/module-c"]],\
       ["@kroger/kap-test-module-server", ["workspace:applications/module-server"]],\
+      ["@kroger/test-clickstream-server", ["workspace:applications/clickstream"]],\
       ["federation-poc", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -153,6 +158,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "@kroger/kap-test-module-server",\
         "workspace:applications/module-server"\
+      ],\
+      [\
+        "@kroger/test-clickstream-server",\
+        "workspace:applications/clickstream"\
       ],\
       [\
         "@npmcli/fs",\
@@ -1481,6 +1490,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./applications/module-server/",\
           "packageDependencies": [\
             ["@kroger/kap-test-module-server", "workspace:applications/module-server"],\
+            ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
+            ["@kroger/kap-configuration-loaders", "npm:0.1.2::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-configuration-loaders%2F-%2F%40kroger%2Fkap-configuration-loaders-0.1.2.tgz"],\
+            ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
+            ["@kroger/kap-federation-beta-cache", "workspace:cache/tags/beta"],\
+            ["@kroger/kap-federation-canary-cache", "workspace:cache/tags/canary"],\
+            ["@kroger/kap-federation-controller", "workspace:platform/controller"],\
+            ["@kroger/kap-federation-latest-cache", "workspace:cache/tags/latest"],\
+            ["@kroger/kap-federation-stable-cache", "workspace:cache/tags/stable"],\
+            ["@yarnpkg/parsers", "npm:3.0.0-rc.14"],\
+            ["chalk", "npm:4.1.2"],\
+            ["fs-extra", "npm:10.1.0"],\
+            ["koa-bodyparser", "npm:4.3.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@kroger/test-clickstream-server", [\
+        ["workspace:applications/clickstream", {\
+          "packageLocation": "./applications/clickstream/",\
+          "packageDependencies": [\
+            ["@kroger/test-clickstream-server", "workspace:applications/clickstream"],\
             ["@kroger/cx-core-web-server", "npm:2.3.6::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fcx-core-web-server%2F-%2F%40kroger%2Fcx-core-web-server-2.3.6.tgz"],\
             ["@kroger/kap-configuration-loaders", "npm:0.1.2::__archiveUrl=https%3A%2F%2Fkrogertechnology.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repo%2F%40kroger%2Fkap-configuration-loaders%2F-%2F%40kroger%2Fkap-configuration-loaders-0.1.2.tgz"],\
             ["@kroger/kap-federation-alpha-cache", "workspace:cache/tags/alpha"],\
